@@ -1,0 +1,244 @@
+body{
+  margin: 0;
+
+  background-color: rgb(25, 25, 25);
+
+  user-select: none;
+}
+
+#menu-button{
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 50px;
+  height: 36px;
+
+  border-radius: 6px;
+  
+  background-color: firebrick;
+
+  cursor: pointer;
+}
+
+#menu-button:hover{
+  filter: brightness(75%) drop-shadow(0 0 2px black);
+}
+
+#menu-button img{
+  position: relative;
+  top: 3px;
+  left: calc(50% - 15px);
+  width: 30px;
+}
+
+#nav{
+  position: relative;
+  width: 100vw;
+  height: 50px;
+
+  box-shadow: 0 5px 6px -1px black;
+  background-color: firebrick;
+}
+
+#menu{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: none;
+
+  filter: drop-shadow(1px 0 5px black);
+  background-color: rgb(70, 105, 97);
+  border-radius: 1px;
+
+  z-index: 2;
+}
+
+#menu #menu-button{
+  position: relative;
+  display: block;
+
+  background-color: rgb(70, 105, 97);
+}
+
+#menu #menu-button:hover{
+  filter: brightness(75%) drop-shadow(0 0 2px black);
+}
+
+#menu ul li{
+  position: relative;
+  margin-bottom: 5px;
+  left: -10px;
+  width: calc(100% - 10px);
+  height: 50px;
+
+  background-color: rgb(62, 95, 89);
+  border-radius: 10px;
+
+  list-style-type: none;
+}
+
+#menu ul li:hover{
+  filter: brightness(75%);
+}
+
+#menu ul li span{
+  position: absolute;
+  top: 12px;
+  width: 100%;
+
+  color: #EFF1E4;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#dir{
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-right: 20px;
+
+  background-color: rgb(35, 35, 45);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
+
+  color: #EFF1E4;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#dir nav{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  
+  display: flex;
+}
+
+#dir nav .cd{
+  position: relative;
+  margin-top: 10px;
+  margin-right: 240px;
+}
+
+#dir nav .backb{
+  right: 0;
+  width: 80px;
+}
+
+#dir nav .downloadb{
+  
+
+  right: 100px;
+  width: 100px;
+}
+
+
+#dir nav .backb, .downloadb{
+  position: absolute;
+  margin-top: 10px;
+
+  background-color: rgb(45, 45, 45);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+#dir nav .backb span{
+  position: relative;
+  top: -1px;
+}
+
+#dir nav .downloadb span{
+  position: relative;
+  top: -1px;
+}
+
+#dir ul li{
+  margin: 5px;
+  padding-top: 5px;
+  margin-left: -15px;
+  padding-right: 20px;
+  height: 35px;
+
+  background-color: rgb(45, 45, 45);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5px;
+
+  list-style-type: none;
+
+  cursor: pointer;
+}
+
+#dir ul li span{
+  position: relative;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+@media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 480px){ 
+    #menu{
+      width: 100vw;
+      z-index: 2;
+    }
+
+    #menu #menu-button{
+      position: relative;
+      display: block;
+
+      background-color: rgb(70, 105, 97);
+    }
+
+    #menu #menu-button:hover{
+      filter: brightness(75%) drop-shadow(0 0 2px black);
+    }
+    
+    #dir nav{
+      max-width: calc((100vw - 150px) + 40px);
+    }
+
+    #dir nav .cd{
+      position: relative;
+      word-wrap: break-word;
+      width: 120px;
+    }
+
+    #dir nav .downloadb{
+      position: absolute;
+      right: 70px;
+    }
+
+    #dir nav .backb{
+      right: 0;
+      width: 60px;
+    }
+
+    #dir nav .backb span{
+      position: relative;
+      top: -1px;
+    }
+
+    #dir ul li{
+      max-width: calc(100vw - 150px);
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+}

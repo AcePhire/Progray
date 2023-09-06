@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progray</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="mustache.js/mustache.js"></script>
+  </head>
+
+
+  <body>
+    <header>
+        <div id="nav">
+            <div id="menu-button"><img src="menu.png" alt="menu"></div>
+          </div>
+    </header>
+
+    <main>
+      <div id="menu">
+          <div id="menu-button"><img src="menu.png" alt="menu"></div>
+          <ul class="categories ">
+            <li onclick="window.location.href='/'"><span>All</span></li>
+            <li onclick="window.location.href='/apps'"><span>Apps</span></li>
+            <li onclick="window.location.href='/games'"><span>Games</span></li>
+            <li onclick="window.location.href='/controls'"><span>Controls</span></li>
+            <li onclick="window.location.href='/filesearch'"><span>File Search</span></li>
+          </ul>
+        </div>
+
+        <div id="dir">
+          <nav>
+            <div class="cd">Drivers</div>
+            <div class=downloadb><span>Download</span></div>
+            <div class=backb><span>Back</span></div>
+          </nav>    
+          <ul class="files">
+            <!-- add <li><span>[letter]:/</span></li> to add another drive -->
+            <li><span>C:/</span></li>
+          </ul>
+        </div>
+    </main>
+    
+  </body>
+  
+  <script src="main.js" charset="utf-8"></script>
+
+</html>
